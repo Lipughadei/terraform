@@ -7,6 +7,7 @@ pipeline{
       steps{
           git 'https://github.com/Lipughadei/Terraform_EC2_instance_creation.git'
           # or you can use main.tf where you can use aws_access_key and aws_secret_key inside provider
+        # https://github.com/Lipughadei/Terraform_EC2_instance_creation.git
       }
     }
     stage('terraform') {
