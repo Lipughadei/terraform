@@ -13,7 +13,7 @@ pipeline{
         script{
           sh "terraform init"
            withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws-cred', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]){
-              sh 'AWS_ACCESS_KEY_ID="AWS_ACCESS_KEY_ID" AWS_SECRET_ACCESS_KEY="AWS_SECRET_ACCESS_KEY"  terraform apply'
+              sh 'terraform apply'
            }
         }
       }
